@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Курсы-->
+        <scene sceneID="6US-Ua-1Rx">
+            <objects>
+                <viewController storyboardIdentifier="currencyEchangeRatesViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fNf-wJ-bXg" customClass="CurrencyRatesViewController" customModule="CurrencyExchangeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wVx-IC-zJI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Une-hF-Riu">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="q1v-S1-Y9K"/>
+                                </constraints>
+                                <color key="separatorColor" systemColor="systemOrangeColor"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="sectionIndexTrackingBackgroundColor" systemColor="systemOrangeColor"/>
+                            </tableView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnO-2C-fVj">
+                                <rect key="frame" x="47" y="71" width="320" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="T7B-V0-U6S"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqq-5U-0BV">
+                                <rect key="frame" x="121" y="43" width="172" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV3-cp-mab">
+                                <rect key="frame" x="20" y="43" width="21" height="22"/>
+                                <state key="normal" image="arrowshape.turn.up.backward.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPush:" destination="fNf-wJ-bXg" eventType="touchUpInside" id="ED8-46-9je"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rns-32-6SV"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Une-hF-Riu" firstAttribute="top" secondItem="cnO-2C-fVj" secondAttribute="bottom" id="BZk-jt-ZqB"/>
+                            <constraint firstItem="rns-32-6SV" firstAttribute="bottom" secondItem="Une-hF-Riu" secondAttribute="bottom" constant="49" id="Ht0-y4-A4U"/>
+                            <constraint firstItem="Une-hF-Riu" firstAttribute="trailing" secondItem="rns-32-6SV" secondAttribute="trailing" id="Kbk-ei-zqx"/>
+                            <constraint firstItem="Une-hF-Riu" firstAttribute="leading" secondItem="rns-32-6SV" secondAttribute="leading" id="XT0-nm-NfG"/>
+                            <constraint firstItem="XV3-cp-mab" firstAttribute="leading" secondItem="rns-32-6SV" secondAttribute="leading" constant="20" id="Z6b-9C-Kh4"/>
+                            <constraint firstItem="cnO-2C-fVj" firstAttribute="leading" secondItem="rns-32-6SV" secondAttribute="leading" constant="47" id="b1Y-aE-el2"/>
+                            <constraint firstItem="cnO-2C-fVj" firstAttribute="top" secondItem="Nqq-5U-0BV" secondAttribute="bottom" id="eNk-CN-ZrP"/>
+                            <constraint firstItem="Nqq-5U-0BV" firstAttribute="centerX" secondItem="wVx-IC-zJI" secondAttribute="centerX" id="i9B-Xh-clF"/>
+                            <constraint firstItem="XV3-cp-mab" firstAttribute="top" secondItem="wVx-IC-zJI" secondAttribute="top" constant="43" id="qHX-YH-jMs"/>
+                            <constraint firstItem="Nqq-5U-0BV" firstAttribute="centerX" secondItem="Une-hF-Riu" secondAttribute="centerX" id="tUa-MH-3j4"/>
+                            <constraint firstItem="Nqq-5U-0BV" firstAttribute="centerX" secondItem="cnO-2C-fVj" secondAttribute="centerX" id="uB6-RZ-kfD"/>
+                            <constraint firstItem="Nqq-5U-0BV" firstAttribute="top" secondItem="XV3-cp-mab" secondAttribute="top" id="vMf-sm-WSm"/>
+                            <constraint firstItem="rns-32-6SV" firstAttribute="trailing" secondItem="cnO-2C-fVj" secondAttribute="trailing" constant="47" id="vru-T4-4ZE"/>
+                            <constraint firstItem="cnO-2C-fVj" firstAttribute="top" secondItem="Nqq-5U-0BV" secondAttribute="bottom" id="xMp-NP-pc2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Курсы" image="list.dash" catalog="system" id="ABG-LH-Q8d"/>
+                    <connections>
+                        <outlet property="currencyListTableView" destination="Une-hF-Riu" id="LJz-eP-mt3"/>
+                        <outlet property="currentCurrency" destination="cnO-2C-fVj" id="t6w-5h-U9A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqh-8P-el6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="0Ez-Uy-nQt" customClass="CurrencyRatesAssembly" customModule="CurrencyExchangeApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="fNf-wJ-bXg" id="HU0-aZ-plA"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-7.2463768115942031" y="-382.36607142857139"/>
+        </scene>
+        <!--Конвертер-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="converterViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ConverterUIViewController" customModule="CurrencyExchangeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-9u-kWO">
+                                <rect key="frame" x="0.0" y="74" width="167" height="131"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="cjq-LY-xXh"/>
+                                </constraints>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Укажите количество" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYi-Q4-C3S">
+                                <rect key="frame" x="189" y="137" width="212" height="58"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTG-lC-b0o">
+                                <rect key="frame" x="0.0" y="241" width="167" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="Hl2-wm-dlS"/>
+                                </constraints>
+                            </pickerView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywL-o7-bCz">
+                                <rect key="frame" x="180" y="199.5" width="221" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xni-hQ-s3z">
+                                <rect key="frame" x="189" y="292" width="212" height="58"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eD-B3-DCB">
+                                <rect key="frame" x="180" y="354" width="221" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNu-Td-vFe">
+                                <rect key="frame" x="348" y="43" width="46" height="30"/>
+                                <state key="normal" title="Курсы"/>
+                                <connections>
+                                    <action selector="currencyRatesViewPresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jzb-4c-BH3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-Uc-d76">
+                                <rect key="frame" x="24" y="46" width="25" height="24"/>
+                                <connections>
+                                    <action selector="infoButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSU-la-OeG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Конвертер валют" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPI-qq-pbr">
+                                <rect key="frame" x="123" y="43" width="168" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aE-1R-zSL">
+                                <rect key="frame" x="121" y="385" width="172" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="rSz-zl-TYV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Перевести">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEe-H8-wEu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="1eD-B3-DCB" firstAttribute="leading" secondItem="XTG-lC-b0o" secondAttribute="trailing" constant="13" id="0hE-Tf-Rer"/>
+                            <constraint firstItem="cYi-Q4-C3S" firstAttribute="top" secondItem="MNu-Td-vFe" secondAttribute="bottom" constant="64" id="2Y8-SR-AiG"/>
+                            <constraint firstItem="cYi-Q4-C3S" firstAttribute="leading" secondItem="2N5-9u-kWO" secondAttribute="trailing" constant="22" id="3Ih-U1-E7s"/>
+                            <constraint firstItem="wo4-Uc-d76" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="9TX-Y6-BUu"/>
+                            <constraint firstItem="xni-hQ-s3z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="292" id="Aau-Bh-x6H"/>
+                            <constraint firstItem="vPI-qq-pbr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B4j-OT-wlB"/>
+                            <constraint firstItem="2N5-9u-kWO" firstAttribute="top" secondItem="vPI-qq-pbr" secondAttribute="bottom" constant="3.5" id="BFF-8e-3Wb"/>
+                            <constraint firstItem="2N5-9u-kWO" firstAttribute="trailing" secondItem="XTG-lC-b0o" secondAttribute="trailing" id="HM1-1J-87X"/>
+                            <constraint firstItem="1eD-B3-DCB" firstAttribute="top" secondItem="xni-hQ-s3z" secondAttribute="bottom" constant="4" id="OOY-v5-QWG"/>
+                            <constraint firstItem="1aE-1R-zSL" firstAttribute="top" secondItem="XTG-lC-b0o" secondAttribute="bottom" constant="14" id="PEv-im-jha"/>
+                            <constraint firstItem="2N5-9u-kWO" firstAttribute="leading" secondItem="XTG-lC-b0o" secondAttribute="leading" id="PXt-Q6-5Zd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cYi-Q4-C3S" secondAttribute="trailing" constant="13" id="PxP-IX-akr"/>
+                            <constraint firstItem="cYi-Q4-C3S" firstAttribute="leading" secondItem="xni-hQ-s3z" secondAttribute="leading" id="TEk-tc-x7M"/>
+                            <constraint firstItem="2N5-9u-kWO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WTi-AS-I7l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1aE-1R-zSL" secondAttribute="bottom" constant="423" id="bl9-CU-ooF"/>
+                            <constraint firstItem="MNu-Td-vFe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iH6-Se-vdg"/>
+                            <constraint firstItem="1aE-1R-zSL" firstAttribute="top" secondItem="1eD-B3-DCB" secondAttribute="bottom" constant="28" id="mdE-ln-SBC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xni-hQ-s3z" secondAttribute="trailing" constant="13" id="qhc-eW-kf1"/>
+                            <constraint firstItem="vPI-qq-pbr" firstAttribute="centerX" secondItem="1aE-1R-zSL" secondAttribute="centerX" id="tf9-xD-brt"/>
+                            <constraint firstItem="wo4-Uc-d76" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="u6R-eC-qZY"/>
+                            <constraint firstItem="xni-hQ-s3z" firstAttribute="trailing" secondItem="1eD-B3-DCB" secondAttribute="trailing" id="vYR-2z-eZ4"/>
+                            <constraint firstItem="vPI-qq-pbr" firstAttribute="baseline" secondItem="wo4-Uc-d76" secondAttribute="firstBaseline" id="wHe-HD-BaD"/>
+                            <constraint firstItem="wo4-Uc-d76" firstAttribute="baseline" secondItem="vPI-qq-pbr" secondAttribute="baseline" id="x5u-jn-HYs"/>
+                            <constraint firstItem="vPI-qq-pbr" firstAttribute="top" secondItem="MNu-Td-vFe" secondAttribute="top" id="xAa-tJ-KRx"/>
+                            <constraint firstItem="XTG-lC-b0o" firstAttribute="top" secondItem="2N5-9u-kWO" secondAttribute="bottom" constant="36" id="xt8-IH-PjP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Конвертер" image="arrowtriangle.right.and.line.vertical.and.arrowtriangle.left" catalog="system" id="vQC-cL-5Yd"/>
+                    <connections>
+                        <outlet property="amountConvertableTextField" destination="cYi-Q4-C3S" id="0pW-FV-ton"/>
+                        <outlet property="amountConvertedTextField" destination="xni-hQ-s3z" id="amz-sX-AWc"/>
+                        <outlet property="fromCurrencyPicker" destination="2N5-9u-kWO" id="4KY-fx-9zP"/>
+                        <outlet property="toCurrencyPicker" destination="XTG-lC-b0o" id="PEM-Id-ueH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="Opy-3I-3Wo" customClass="ConverterAssembly" customModule="CurrencyExchangeApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="8IX-Or-DeQ"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-828.98550724637687" y="-382.36607142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowtriangle.right.and.line.vertical.and.arrowtriangle.left" catalog="system" width="128" height="89"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
